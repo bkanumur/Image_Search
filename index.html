@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Image Search App</h1>
+        <button id="theme-toggle">🌙</button>
+      </div>
+      <p class="app-description">
+        Search for any desired image using our advanced app. Customize results with filters, toggle themes, and save your favorite searches!
+      </p>
+    </header>
+    <main>
+      <form>
+        <input type="text" id="search-input" placeholder="Search for images..." required />
+        <button id="search-button">Search</button>
+      </form>
+      <div class="filters">
+        <select id="orientation-filter">
+          <option value="">All Orientations</option>
+          <option value="landscape">Landscape</option>
+          <option value="portrait">Portrait</option>
+          <option value="squarish">Square</option>
+        </select>
+        <select id="color-filter">
+          <option value="">All Colors</option>
+          <option value="black_and_white">Black and White</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="yellow">Yellow</option>
+          <option value="red">Red</option>
+        </select>
+      </div>
+      <div id="loader" class="hidden">Loading...</div>
+      <div class="search-results"></div>
+    </main>
+    <footer>
+      <p>Powered by <a href="https://unsplash.com" target="_blank">Unsplash API</a></p>
+    </footer>
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <span id="modal-close">&times;</span>
+        <img id="modal-image" src="" alt="Preview" />
+        <p id="modal-description"></p>
+        <a id="modal-link" href="#" target="_blank">View on Unsplash</a>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
